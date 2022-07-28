@@ -27,6 +27,14 @@ function songSearch() {
   loadAPIdata(splitArtist, splitSong);
 }
 
+let songField = document.getElementById("songname")
+songField.addEventListener('keypress', (event) => {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    songSearch();
+  }
+})
+
 // API fetch request for song lyrics
 // returns data in JSON format and passes to a function
 
@@ -64,6 +72,7 @@ function printLyrics(song) {
   let h4 = document.getElementById('artist-song');
   let paragraph = document.getElementById('lyrics');
   let split = song.lyrics;
+  console.log(split)
   let find = '\n';
   let replace = '<br>'
 
