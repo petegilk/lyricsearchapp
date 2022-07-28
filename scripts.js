@@ -4,11 +4,13 @@ let splitArtist;
 let splitSong;
 
 function songSearch() {
-  let artist = prompt("Enter an artist");
-  let song;
-  if (artist) {
-    song = prompt("Enter a song name");
-  }
+  // let artist = prompt("Enter an artist");
+  // let song;
+  // if (artist) {
+  //   song = prompt("Enter a song name");
+  // }
+  let artist = document.getElementById('artist').value;
+  let song = document.getElementById('songname').value;
 
   splitArtist = artist.toLowerCase().trim();
   splitSong = song.toLowerCase().trim();
